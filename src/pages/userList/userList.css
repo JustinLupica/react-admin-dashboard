@@ -1,5 +1,11 @@
 .user-list {
   flex: 4;
+  padding-right: 50px;
+}
+
+.customer-header {
+  text-align: center;
+  padding: 20px;
 }
 
 .user-list-user {

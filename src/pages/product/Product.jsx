@@ -1,3 +1,4 @@
+import { Publish } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import Chart from "../../components/charts/Chart";
 import { productData } from "../../dummyData";
@@ -45,7 +46,43 @@ export default function Product() {
           </div>
         </div>
       </div>
-      <div className="product-bottom"></div>
+      <div className="product-bottom">
+        <form className="product-form">
+          <div className="product-form-left">
+            <label>Product Name:</label>
+            <input type="text" placeholder="Apple Airpods" />
+            <label>In Stock:</label>
+            <select name="inStock" id="inStock">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            <label>Active:</label>
+            <select name="active" id="active">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div className="product-form-right">
+            <div className="product-upload">
+              <img
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MV7N2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1551489688005"
+                alt=""
+                className="product-upload-img"
+              />
+              <label for="file">
+                <Publish />
+              </label>
+              <input
+                type="file"
+                name="file"
+                id="file"
+                style={{ display: "none" }}
+              />
+            </div>
+            <button className="product-button">Update</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
